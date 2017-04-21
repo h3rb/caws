@@ -1,13 +1,15 @@
 # caws
-_Caws_ is a web application backend framework built on Crow + AWS SDK that you can pair with, among other things, S3 assets from a domain redirect.  It combines Crow with sqlpp and AWS SDK.  You need to get each of these things to properly use it.
-
-Crow (C++ Web Backend Framework) https://github.com/ipkn/crow
-AWS C++ SDK (from Amazon) https://sdk.amazonaws.com/cpp/api/LATEST/index.html
-SQLpp (ORM add-on for Crow) https://github.com/rbock/sqlpp11
+_Caws_ is a web application backend framework built on Crow + AWS SDK that you can pair with, among other things, S3 assets from a domain redirect.  
 
 This means you can host your site primarily on S3 (cheap fast CDN from Amazon), and limit your compute cloud to infrastructure that runs faster than GoLang: C++
 
 A minimal installation includes AWS SDK, Crow and a database driver of your choice such as MySQL.
+
+_Caws_ combines Crow with sqlpp and AWS SDK.  You need to get each of these things to properly use it.
+
+1. Crow (C++ Web Backend Framework) https://github.com/ipkn/crow
+2. AWS C++ SDK (from Amazon) https://sdk.amazonaws.com/cpp/api/LATEST/index.html
+3. SQLpp (ORM add-on for Crow) https://github.com/rbock/sqlpp11
 
 ### The approach for developing a _Caws_ site:
 
