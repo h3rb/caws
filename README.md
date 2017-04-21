@@ -9,7 +9,7 @@ This means you can host your site primarily on S3 (cheap fast CDN from Amazon), 
 
 A minimal installation includes AWS SDK, Crow and a database driver of your choice such as MySQL.
 
-The approach for developing a _Caws_ site:
+### The approach for developing a _Caws_ site:
 
 * Amzn S3 will hold all of your static pages, Javascript files, fonts, images and static data caches. 
 * Static pages, files, fonts and scripts will reference Caws.
@@ -17,20 +17,20 @@ The approach for developing a _Caws_ site:
 
 To develop for Caws, we use an insecure starting place.  In the best of environments, you are accessing Caws through a Bastion service which provides granular access tracking and load balancing functionality.  Caws must be extended to run in multiple "shards", which interface with a central hub like AWS IAM (or an RDS) for access control.
 
-''Dev Environment''
+#### Dev Environment
 
 * Caws could access localhost development DB or free tier RDS
 * AWS calls from Caws
 
-''Live Environment''
+#### Live Environment
 
 * Caws accesses private RDS, Aurora or equivalent cluster
 * Caws service has a security cert installed, and is using SSL exclusively when hit from outside
 * Caws service is managed by a multi-AZ redundant load balanced system
 
-Installation and Getting Started
+## Installation and Getting Started
 
-Linux
+#### Linux
 
 _Caws_ requires you to run a Bash-style install script when building.  This will grab the latest copies of the required repos.  You can modify the {./Install} script to suit your setup and situation.  This will deploy your local copy which you will then edit to suit your application needs. You can manually perform the steps in the script if you wish to change anything before building for the first time.
 
@@ -38,11 +38,11 @@ _Caws_ requires you to run a Bash-style install script when building.  This will
 2. Execute the script to clone the other repos and perform combinatory steps
 3. Use/modify the ./Recompile script to your liking or roll your own compilation system using whatever make system you'd like.
 
-Windows
+#### Windows
 
 This doesn't work on Windows, but you may figure out a way to cross compile it for one of those pseudo-linux platforms, or you can work on it in a VirtualBox or other virtualization technology.
 
-How Caws is implemented
+## How Caws is implemented
 
 Caws simply sets up the environment, and provides utility classes which you may or may not wish to use, that perform various functions using the AWS SDK.  This is a mere suggestion of what an application should be built like, and you are encouraged to optimize your use of AWS, sqlpp and Crow to best suit your application.
 
