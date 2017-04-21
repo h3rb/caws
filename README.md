@@ -17,12 +17,12 @@ The approach for developing a _Caws_ site:
 
 To develop for Caws, we use an insecure starting place.  In the best of environments, you are accessing Caws through a Bastion service which provides granular access tracking and load balancing functionality.  Caws must be extended to run in multiple "shards", which interface with a central hub like AWS IAM (or an RDS) for access control.
 
-Dev Environment
+''Dev Environment''
 
 * Caws could access localhost development DB or free tier RDS
 * AWS calls from Caws
 
-Live Environment
+''Live Environment''
 
 * Caws accesses private RDS, Aurora or equivalent cluster
 * Caws service has a security cert installed, and is using SSL exclusively when hit from outside
@@ -34,9 +34,9 @@ Linux
 
 _Caws_ requires you to run a Bash-style install script when building.  This will grab the latest copies of the required repos.  You can modify the {./Install} script to suit your setup and situation.  This will deploy your local copy which you will then edit to suit your application needs. You can manually perform the steps in the script if you wish to change anything before building for the first time.
 
-# git clone this repo
-# Execute the script to clone the other repos and perform combinatory steps
-# Use/modify the ./Recompile script to your liking or roll your own compilation system using whatever make system you'd like.
+1. git clone this repo
+2. Execute the script to clone the other repos and perform combinatory steps
+3. Use/modify the ./Recompile script to your liking or roll your own compilation system using whatever make system you'd like.
 
 Windows
 
